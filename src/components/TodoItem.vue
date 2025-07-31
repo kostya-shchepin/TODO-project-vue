@@ -30,6 +30,7 @@ export default {
     font-size: 24px;
     font-weight: 500;
     span {
+        word-break: break-word;
         transition: 100ms;
     }
     .task-checkbox {
@@ -83,6 +84,29 @@ export default {
             height: 3px;
             background-color: #fff;
             position: absolute;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .task {
+        font-size: 18px;
+        .task-checkbox {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #03abff;
+            &:checked::after {
+                width: 22px;
+                height: 18px;
+            }
+        }
+        .delete-task {
+            width: 32px;
+            height: 32px;
+            &::before {
+                width: 20px;
+                height: 2px;
+            }
         }
     }
 }

@@ -67,7 +67,8 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #fff;
-    width: 400px;
+    width: 70%;
+    max-width: 400px;
     padding: 30px;
     transition: 0.5s all;
     border-radius: 30px;
@@ -139,6 +140,21 @@ export default {
         color: #fa4141;
         cursor: pointer;
         transform: rotate(-45deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        .label__text {
+            font-size: 16px;
+        }
+        input {
+            font-size: 16px;
+        }
+        button {
+            height: 50px;
+            font-size: 18px;
+        }
     }
 }
 </style>

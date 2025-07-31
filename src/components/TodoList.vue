@@ -25,4 +25,10 @@ export default {
     flex-direction: column;
     gap: 20px;
 }
+
+@media (max-width: 768px) {
+    .task-block {
+        gap: 10px;
+    }
+}
 </style>

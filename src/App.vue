@@ -1,7 +1,8 @@
 <template>
     <div class="block">
         <h2>Список дел</h2>
-        <TodoList v-bind:todos="todos" @remove-todo="removeTodo" />
+        <TodoList v-if="todos.length" v-bind:todos="todos" @remove-todo="removeTodo" />
+        <p class="empty" v-else>Список дел пуст</p>
         <AddTodo @add-todo="addTodo" />
     </div>
 </template>
@@ -80,6 +81,9 @@ button {
         background: #f9f9f9;
         border-radius: 15px;
     }
+    .empty {
+        font-size: 18px;
+    }
 }
 
 .add-task {
@@ -110,7 +114,28 @@ button {
 }
 @media (max-width: 768px) {
     .block {
-        max-width: 70%;
+        padding: 30px 25px;
+        margin-top: 20px;
+        max-width: 80%;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .empty {
+            font-size: 16px;
+        }
+    }
+    .add-task {
+        width: 100px;
+        height: 35px;
+        &::before {
+            width: 2px;
+            height: 20px;
+        }
+        &::after {
+            width: 20px;
+            height: 2px;
+        }
     }
 }
 </style>
