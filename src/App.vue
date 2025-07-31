@@ -49,7 +49,9 @@ export default {
 body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    background: linear-gradient(45deg, rgb(255, 236, 141), rgb(42, 232, 238)) fixed;
+    /* background: repeat; */
+    background: url("assets/tasks.png") center, linear-gradient(45deg, rgb(255, 236, 141), rgb(42, 232, 238)) fixed;
+    background-repeat: space;
     height: 100%;
 }
 
